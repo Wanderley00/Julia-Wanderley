@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Você, Meu Amor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="heart-animation"></div>
+
+    <!-- Slide 1 -->
+    <div class="slide active" id="slide1">
+        <div class="message">Bem-vinda de volta, meu amor!</div>
+        <button class="next-btn" onclick="nextSlide()">❤️</button>
+    </div>
+    
+    <!-- Slide 2 -->
+    <div class="slide" id="slide2">
+        <div class="message">Enquanto você estava explorando a Europa, eu estava contando os dias para ter você de volta.</div>
+        <button class="next-btn" onclick="nextSlide()"></button>
+    </div>
+    
+    <!-- Slide 3 -->
+    <div class="slide" id="slide3">
+        <div class="message">Você sabe o quanto nós te amamos?</div>
+        <div class="image-container">
+            <img src="imagem1.jpg" alt="Casal na praia com cachorro">
+        </div>
+        <div class="love-meter">
+            <button class="heart-btn" onclick="decreaseLove()">💔</button>
+            <div class="meter-value">0%</div>
+            <button class="heart-btn" onclick="increaseLove(), startConfetti()">❤️</button>
+        </div>
+    </div>
+    
+    <!-- Slide 4 -->
+    <div class="slide" id="slide4">
+        <div class="message">Você é nossa vida!</div>
+        <div class="image-container">
+            <img src="imagem1.jpg" alt="Casal na praia com cachorro">
+            <div class="heart-overlay" id="heart-overlay"></div>
+        </div>
+        <button class="next-btn" onclick="nextSlide()"></button>
+    </div>
+    
+    
+    <!-- Slide 5 -->
+    <div class="slide" id="slide5">
+        <div class="message">Raspe o quadrado para descobrir uma surpresa</div>
+        <div class="scratch-area">
+            <img class="hidden-image" src="imagem2.jpg" alt="Imagem surpresa">
+            <div class="scratch-overlay" id="scratch-overlay"></div>
+        </div>
+        <button class="next-btn" onclick="nextSlide()">Continuar</button>
+    </div>
+    
+    <!-- Slide 6 -->
+    <div class="slide" id="slide6">
+        <div class="message">Qual o mês em que a pessoa mais especial desse mundo nasceu?</div>
+        <div class="month-options">
+            <button class="month-btn" onclick="selectMonth('Junho')">Junho</button>
+            <button class="month-btn" onclick="selectMonth('Abril')">Abril</button>
+            <button class="month-btn" onclick="selectMonth('Março')">Março</button>
+            <button class="month-btn" onclick="selectMonth('Novembro')">Novembro</button>
+            <button class="month-btn" onclick="selectMonth('Dezembro')">Dezembro</button>
+            
+        </div>
+    </div>
+    
+    <!-- Slide 7 -->
+    <div class="slide" id="slide7">
+        <div class="message">Pois é, preparei essa surpresa para te lembrar do quanto você é especial para mim!</div>
+        <button class="next-btn" onclick="nextSlide()"></button>
+    </div>
+    
+    <!-- Slide 8 -->
+    <div class="slide" id="slide8">
+        <div class="message">E junto dela está seu presente de aniversário...</div>
+        <button class="next-btn" onclick="nextSlide()"></button>
+    </div>
+    
+    <!-- Slide 9 -->
+    <div class="slide" id="slide9">
+        <div class="message">Espero que goste, pode entrar ❤️</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
