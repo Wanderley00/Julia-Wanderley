@@ -98,7 +98,7 @@ function setupScratch() {
         ctx.globalCompositeOperation = 'destination-out';
         
         // Tamanho do pincel de raspagem
-        const brushSize = 30;
+        const brushSize = 12;
         
         // Criar um pincel com bordas suaves
         const gradient = ctx.createRadialGradient(x, y, 0, x, y, brushSize);
