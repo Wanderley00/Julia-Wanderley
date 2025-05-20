@@ -577,6 +577,9 @@ body {
     width: 100%;
     max-width: 400px;
     margin: 20px 0;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 5px;
 }
 
 .gallery-item {
@@ -632,7 +635,15 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
     
-    .date-options, .photo-gallery {
+    .photo-gallery {
+        grid-template-columns: 1fr;
+        max-height: 350px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 10px;
+    }
+    
+    .date-options {
         grid-template-columns: 1fr;
     }
 }
@@ -753,4 +764,23 @@ body::before {
 .success-message.visible {
     display: block;
     animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Estilo da barra de rolagem */
+.photo-gallery::-webkit-scrollbar {
+    width: 8px;
+}
+
+.photo-gallery::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.photo-gallery::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #a78bfa, #8a6bfc);
+    border-radius: 10px;
+}
+
+.photo-gallery::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #8a6bfc, #7c5df9);
 }
