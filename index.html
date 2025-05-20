@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Você, Meu Amor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="heart-animation"></div>
+
+    <!-- Slide 1 -->
+    <div class="slide active" id="slide0">
+        <div class="message">Bem-vinda de volta, meu amor!</div>
+        <button class="next-btn" onclick="nextSlide()">❤️</button>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide" id="slide1">
+        <div class="message">Adiantei seu presente de aniversário e acabei destinando ele para nosso aniversário de namoro🤣</div>
+        <button class="next-btn" onclick="nextSlide()"></button>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" id="slide2">
+        <div class="message">Preparei essa surpresa com carinho, interaja com cada cenário, espero que goste❤️</div>
+        <button class="next-btn" onclick="nextSlide()"></button>
+    </div>
+    
+    <!-- Slide 4 -->
+    <div class="slide" id="slide3">
+        <div class="message">Você sabe o quanto eu te amo?</div>
+        <div class="image-container">
+            <img src="imagem5.jpg" alt="Meu amor">
+        </div>
+        <div class="love-meter">
+            <button class="heart-btn" onclick="decreaseLove()">💔</button>
+            <div class="meter-value">0%</div>
+            <button class="heart-btn" onclick="increaseLove(), startConfetti()">❤️</button>
+        </div>
+    </div>
+    
+    <!-- Slide 5 -->
+    <div class="slide" id="slide4">
+        <div class="message">Você é minha joia!</div>
+        <div class="image-container">
+            <img src="imagem6.jpg" alt="Minha princesa">
+            <div class="heart-overlay" id="heart-overlay"></div>
+        </div>
+        <button class="next-btn" onclick="nextSlide()"></button>
+    </div>
+    
+    
+    <!-- Slide 6 -->
+    <div class="slide" id="slide5">
+        <div class="message">Raspe o quadrado para descobrir uma surpresa</div>
+        <div class="scratch-area">
+            <img class="hidden-image" src="imagem1.jpg" alt="imagem surpresa">
+            <div class="scratch-overlay" id="scratch-overlay"></div>
+        </div>
+        <button class="next-btn" onclick="nextSlide()">Continuar</button>
+    </div>
+    
+    <!-- Slide 7 -->
+    <div class="slide" id="slide6">
+        <div class="message">Qual o mês em que a pessoa mais especial desse mundo nasceu?</div>
+        <div class="month-options">
+            <button class="month-btn" onclick="selectMonth('Junho')">Junho</button>
+            <button class="month-btn" onclick="selectMonth('Abril')">Abril</button>
+            <button class="month-btn" onclick="selectMonth('Março')">Março</button>
+            <button class="month-btn" onclick="selectMonth('Novembro')">Novembro</button>
+            <button class="month-btn" onclick="selectMonth('Dezembro')">Dezembro</button>
+            
+        </div>
+    </div>
+    
+    <!-- Slide 8 -->
+    <div class="slide" id="slide7">
+        <div class="message">Pois é, preparei essa surpresa para te lembrar do quanto você é especial para mim!</div>
+        <button class="next-btn" onclick="nextSlide()"></button>
+    </div>
+    
+    <!-- Slide 9 - Contador de tempo de relacionamento -->
+    <div class="slide" id="slide8">
+        <div class="message">Você sabia que já estamos juntos há...</div>
+        <div class="time-counter" id="time-counter">
+            <!-- Será preenchido pelo JavaScript -->
+        </div>
+        <button class="next-btn" onclick="nextSlide()">E isso é só o começo ❤️</button>
+    </div>
+    
+    <!-- Slide 10 - Data especial -->
+    <div class="slide" id="slide9">
+        <div class="message">Que tal um pequeno desafio? Escolha nosso aniversário de namoro:</div>
+        <div class="date-options">
+            <button class="date-btn" onclick="selectDate(false)">10 de Junho</button>
+            <button class="date-btn" onclick="selectDate(false)">15 de Maio</button>
+            <button class="date-btn" id="correct-date" onclick="selectDate(true)">20 de Maio</button>
+            <button class="date-btn" onclick="selectDate(false)">25 de Maio</button>
+        </div>
+        <div class="success-message" id="date-success-message">
+            ❤️ Acertou! Você é incrível! ❤️
+        </div>
+    </div>
+    
+    <!-- Slide 11 - Pares Perfeitos -->
+    <div class="slide" id="slide10">
+        <div class="message">Pares perfeitos! Combine cada item da esquerda com seu par na direita:</div>
+        <div class="perfect-match-container">
+            <div class="match-column">
+                <div class="match-item" id="left1" onclick="selectPerfectMatch('left1')">Você</div>
+                <div class="match-item" id="left2" onclick="selectPerfectMatch('left2')">Nosso Amor</div>
+                <div class="match-item" id="left3" onclick="selectPerfectMatch('left3')">Nossa História</div>
+            </div>
+            <div class="match-column">
+                <div class="match-item" id="right1" onclick="selectPerfectMatch('right1')">Infinito</div>
+                <div class="match-item" id="right2" onclick="selectPerfectMatch('right2')">Inesquecível</div>
+                <div class="match-item" id="right3" onclick="selectPerfectMatch('right3')">Perfeita</div>
+            </div>
+        </div>
+        <div class="success-message" id="perfect-match-success">
+            ❤️ Você sabe mesmo sobre nós! ❤️
+            <button class="next-btn" onclick="nextSlide()">Continuar</button>
+        </div>
+    </div>
+    
+    <!-- Slide 12 - Jogo da Memória -->
+    <div class="slide" id="slide11">
+        <div class="message">Vamos jogar um jogo da memória do amor?</div>
+        <div class="memory-game" id="memory-game">
+            <!-- Será preenchido pelo JavaScript -->
+        </div>
+        <div class="success-message" id="memory-success">
+            ❤️ Sua memória é tão linda quanto você! ❤️
+            <button class="next-btn" onclick="nextSlide()">Continuar</button>
+        </div>
+    </div>
+    
+    <!-- Slide 13 - Revelar Frase -->
+    <div class="slide" id="slide12">
+        <div class="message">Revele uma das minhas três frases especias:</div>
+        <div class="quote-container" id="quote-container">
+            <!-- Será preenchido pelo JavaScript -->
+        </div>
+        <button class="reveal-btn" id="reveal-quote-btn">Revelar uma letra</button>
+        <button class="next-btn hidden" id="quote-continue-btn" onclick="nextSlide()">Continuar</button>
+    </div>
+    
+    <!-- Slide 14 - Mensagem com efeito de digitação -->
+    <div class="slide" id="slide13">
+        <div class="message">
+            <!-- Será preenchido pelo JavaScript com efeito de digitação -->
+        </div>
+        <button class="next-btn" onclick="nextSlide()">❤️</button>
+    </div>
+    
+    <!-- Slide 15 - Galeria de Fotos -->
+    <div class="slide" id="slide14">
+        <div class="message">Momentos especiais que sempre guardarei no coração:</div>
+        <div class="photo-gallery">
+            <div class="gallery-item">
+                <img src="imagem7.jpg" alt="Momento especial 1">
+            </div>
+            <div class="gallery-item">
+                <img src="imagem3.jpg" alt="Momento especial 2">
+            </div>
+            <div class="gallery-item">
+                <img src="imagem2.jpg" alt="Momento especial 3">
+            </div>
+            <div class="gallery-item">
+                <img src="imagem5.jpg" alt="Momento especial 4">
+            </div>
+        </div>
+        <button class="next-btn" onclick="nextSlide()">Continuar</button>
+    </div>
+    
+    <!-- Slide 16 - Final -->
+    <div class="slide" id="slide15">
+        <div class="message">Te amo muito, meu amor. Obrigado por fazer parte da minha vida!</div>
+        <div class="final-heart">❤️</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
